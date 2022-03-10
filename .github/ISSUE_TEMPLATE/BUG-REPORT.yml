@@ -93,3 +93,11 @@ body:
         - Opera
     validations:
       required: false
+  - type: checkboxes
+    id: docker
+    attributes:
+      label: "Docker"
+      description: Will Docker be impacted ?
+      options:
+        - label: yes
+        - label: no
