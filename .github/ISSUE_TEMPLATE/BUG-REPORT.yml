@@ -71,14 +71,6 @@ body:
       render: bash
     validations:
       required: false
-  - type: textarea
-    id: logs
-    attributes:
-      label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: bash
-    validations:
-      required: false
   - type: checkboxes
     id: docker
     attributes:
