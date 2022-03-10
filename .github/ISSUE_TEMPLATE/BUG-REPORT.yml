@@ -11,3 +11,11 @@ body:
       placeholder: ex. user@example.com or username#id
     validations:
       required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: "Version"
+      description: What is the impacted version ?
+      multiple: false
+      options:
+        - Latest
