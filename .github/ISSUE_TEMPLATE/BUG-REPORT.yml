@@ -21,7 +21,7 @@ body:
         - Latest
     validations:
       required: true
- - type: dropdown
+  - type: dropdown
     id: branches
     attributes:
       label: "Branch"
