@@ -1,0 +1,40 @@
+name: Pipeline - Stale
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+
+  # More info:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions:checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/stale@main
+        name: Observer INC & PRs
+        with:
+          repo-token: ${{github.token}}
+          days-before-stale: 30
+          days-before-close: 8
+          stale-issue-message: "We would like to inform you that this incident has not been updated for 30 days. Please inform us within 8 days if your incident is still current or not through this incident."
+          stale-pr-message: "We would like to inform you that this Pull Request has not been updated for 30 days. Please inform us within 8 days if your Pull Request is still current or not through this Pull Request."
+          close-issue-message: "Even though we've sent several reminders, we notice that no updates have been made to this incident. If it is still active, please reopen the incident with a comment."
+          close-pr-message: "Even though we've sent several reminders, we notice that no updates have been made to this Pull Request. If it is still current, please reopen the Pull Request with a comment or an update."
+          stale-issue-label: '⌛ awaiting-reply'
+          stale-pr-label: '⌛ awaiting-reply'
+          close-issue-label: '✔️ automatic-closing'
+          close-pr-label: '✔️ automatic-closing'
+          exempt-issue-labels: '⌛ awaiting-review,✔️ approved-review,🚧 chore,⌛ in-progress,⌛ in-review,⛔ blocked-review,⛔ blocked,⛔ blocker'
+          exempt-pr-labels: '⌛ awaiting-review,✔️ approved-review,🚧 chore,⌛ in-progress,⌛ in-review,⛔ blocked-review,⛔ blocked,⛔ blocker'
+          remove-stale-when-updated: true
+          delete-branch: false
+      - name: Print outputs
+        run: echo ${{ join(steps.stale.outputs.*, ',') }}

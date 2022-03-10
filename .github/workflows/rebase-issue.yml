@@ -1,0 +1,24 @@
+name: Pipeline - Automatic Rebase
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+
+  # More info:
+  rebase:
+    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/rebase')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: cirrus-actions/rebase@1.5
+        name: Automatic Rebase
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

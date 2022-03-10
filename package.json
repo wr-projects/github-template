@@ -1,0 +1,31 @@
+{
+  "name": "github-template",
+  "description": "🚀 GitHub template to provide a pre-designed architecture for all types of open-source projects.",
+  "version": "v0.0.1-aargau",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wr-projects/github-template.git"
+  },
+  "author": "Gregoire Favreau <gfavreau.wrprojects@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@webreadyprojects/cz-changelog-wrprojects": "0.0.4-abhean",
+    "husky": "^7.0.4"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "test": "echo 'Tests need to be setup!'",
+    "postinstall": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "'commitlint -E HUSKY_GIT_PARAMS', 'validate-commit-msg'",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@webreadyprojects/cz-changelog-wrprojects"
+    }
+  }
+}

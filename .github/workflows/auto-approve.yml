@@ -1,0 +1,19 @@
+name: Auto approve
+on:
+  - pull_request_target
+
+jobs:
+
+  # More info: https://github.com/hmarr/auto-approve-action.
+  auto-approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: hmarr/auto-approve-action@v2
+        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"

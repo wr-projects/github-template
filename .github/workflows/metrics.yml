@@ -1,0 +1,92 @@
+name: Pipeline - Metrics
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  github-metrics:
+    name: Github Metrics
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Metrics - 🎩 Notable contributions
+        uses: lowlighter/metrics@master
+        with:
+          committer_gist: 8e01675010ff637355609641fd57fe23 # your gist id as shown in gist url
+          output_action: gist
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          #Options
+          base: metadata
+          template: classic
+          config_timezone: Europe/Paris
+
+          # 🎩 Notable contributions
+          plugin_notable: yes
+          plugin_notable_filter: stars:>500 # Only display repositories with 500 stars or more (syntax based on GitHub search query)
+          plugin_notable_from: organization # Only display contributions within organization repositories
+          plugin_notable_repositories: yes # Display repositories name instead of only organization name
+          plugin_notable_indepth: yes # Gather additional informations about contributions
+      - name: GitHub Metrics - 🧑‍🤝‍🧑 People plugin
+        uses: lowlighter/metrics@master
+        with:
+          committer_gist: 378434b35316787dfce1929deba1721c # your gist id as shown in gist url
+          output_action: gist
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          #Options
+          base: metadata
+          template: classic
+          config_timezone: Europe/Paris
+
+          # 🧑‍🤝‍🧑 People plugin
+          plugin_people: yes
+          plugin_people_types: sponsors, contributors, stargazers, thanks
+          plugin_people_limit: 28
+          plugin_people_size: 28
+          plugin_people_identicons: no
+          plugin_people_thanks: lowlighter
+          plugin_people_sponsors_custom: GregoireF
+          plugin_people_shuffle: yes
+      - name: GitHub Metrics - 💬 Discussions
+        uses: lowlighter/metrics@master
+        with:
+          committer_gist: caf930c995804d565ffc9bb85fe79f8c # your gist id as shown in gist url
+          output_action: gist
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          #Options
+          base: metadata
+          template: classic
+          config_timezone: Europe/Paris
+
+          # 💬 Introduction
+          plugin_discussions: yes
+      - name: GitHub Metrics - 🙋 Introduction
+        uses: lowlighter/metrics@master
+        with:
+          committer_gist: 2c8c8922f2a8f5105e91c0ade35409bf # your gist id as shown in gist url
+          output_action: gist
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          #Options
+          base: metadata
+          template: classic
+          config_timezone: Europe/Paris
+
+          # 🙋 Introduction
+          plugin_introduction: yes
+      - name: GitHub Metrics - 💕 Sponsors
+        uses: lowlighter/metrics@master
+        with:
+          committer_gist: dfd413a2be7041b0fef467414e40f1b4 # your gist id as shown in gist url
+          output_action: gist
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          #Options
+          base: metadata
+          template: classic
+          config_timezone: Europe/Paris
+
+          # 💕 Sponsors
+          plugin_sponsors: yes
+          plugin_sponsors_sections: goal, about

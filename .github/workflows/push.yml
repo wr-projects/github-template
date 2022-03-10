@@ -1,0 +1,45 @@
+name: Pipeline - Push
+on: push
+
+jobs:
+
+  # More info: https://github.com/GitGuardian/ggshield-action
+  gitguardian:
+    name: GitGuardian Scanner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout & Authentication
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: GitGuardian Scanner
+        uses: GitGuardian/gg-shield-action@master
+        with:
+          args: -v --all-policies
+        env:
+          GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
+          GITHUB_PUSH_BASE_SHA: ${{ github.event.before }}
+          GITHUB_PULL_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+
+  # More info: https://github.com/fabasoad/nsfw-detection-action
+  nsfw-detection:
+    runs-on: ubuntu-latest
+    needs: [gitguardian]
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: fabasoad/nsfw-detection-action@main
+        name: Check for new dependencies
+        with:
+          provider:
+          threshold: 0.9
+          type: modified,added,renamed
+          extensions: jpg,jpeg,png,gif,webp
+          api_key: ${{ secrets. }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}

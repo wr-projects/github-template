@@ -1,0 +1,98 @@
+name: Pipeline - Pull Request
+on:
+  - pull_request
+
+jobs:
+
+  # More info: https://github.com/GitGuardian/ggshield-action
+  gitguardian:
+    name: GitGuardian Scanner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout & Authentication
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: GitGuardian Scanner
+        uses: GitGuardian/gg-shield-action@master
+        with:
+          args: -v --all-policies
+        env:
+          GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
+          GITHUB_PUSH_BASE_SHA: ${{ github.event.before }}
+          GITHUB_PULL_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+
+  # More info: https://github.com/pineapplelol/emojify-pr-title
+  emojify-pr-title:
+    runs-on: ubuntu-latest
+    needs: [gitguardian]
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Emojify PR Title
+        uses: pineapplelol/emojify-pr-title@v1.5.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          use-emoji-map: true
+          use-fuzzy: false
+          emoji-map: 'https://raw.githubusercontent.com/WebReadyProjects/github-template/main/.github/config/emoji_mapping.json'
+
+  # More info: https://github.com/hiwelo/new-dependencies-action
+  check_new_dependencies:
+    runs-on: ubuntu-latest
+    needs: [gitguardian]
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: hiwelo/new-dependencies-action@1.0.1
+        name: Check for new dependencies
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  # More info: https://github.com/reviewdog/reviewdog
+  reviewdog:
+    name: Reviewdog
+    runs-on: ubuntu-latest
+    needs: [gitguardian]
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: nightly
+      - name: Run Reviewdog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          reviewdog -reporter=github-pr-check -runners=eslint,yamllint,actionlint,misspell
+
+  # More info: https://github.com/AlbertHernandez/working-label-action
+  working_label:
+    runs-on: ubuntu-latest
+    needs: [gitguardian]
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: AlbertHernandez/working-label-action@v1.0.3
+        name: Label WIP
+        with:
+          work_in_progress_label: '🚧 chore'
+          ready_to_review_label: '⌛ awaiting-review'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

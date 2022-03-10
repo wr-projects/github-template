@@ -1,0 +1,32 @@
+name: Pipeline - Linter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+
+  # More info: https://github.com/github/super-linter
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Linter
+        uses: github/super-linter@main
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          DISABLE_ERRORS: false
+          LINTER_RULES_PATH: .github/config/linters
+          CSS_FILE_NAME: .stylelintrc.json
+          EDITORCONFIG_FILE_NAME: .ecrc
+          IGNORE_GITIGNORED_FILES: true
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.js
+          MARKDOWN_CONFIG_FILE: .markdownlint.json
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,200 @@
+---
+- name: ✔️ approved-review
+  color: '71FFA4'
+  description: Review approved and PR ready to merge
+
+- name: ✔️ automatic-closing
+  color: '71FFA4'
+  description: Automatic closing due to inactivity
+
+- name: ⌛ awaiting-review
+  color: 'E3A466'
+  description: PR awaiting for review
+
+- name: ⌛ awaiting-reply
+  color: 'E3A466'
+  description: Waiting for user response
+
+- name: ⛔ blocked-review
+  color: 'E64320'
+  description: Review blocked (specify why in comments)
+
+- name: 👌 good-first-issue
+  color: 'E64320'
+  description: The report contains instructions or hints required to fix it. It is an excellent place for someone new to learn about the project by fixing a real issue.
+
+- name: 🐛 in-analysis
+  color: 'E64320'
+  description: The issue is being analyzed to determine if it is a real incident
+
+- name: 🆘 new-issue
+  color: '78A5FF'
+  description: New incident not yet taken care of by a project collaborator
+
+- name: 🐛 bug
+  color: 'E64320'
+  description: Confirmed bug
+
+- name: 🔐 security
+  color:
+  description: Generally linked to the critical-priority label, it is therefore necessary to pay attention to the usage.
+
+- name: 🩺 test
+  color:
+  description: Extensive testing needs to be done on the issue
+
+- name: 💡 rfc
+  color:
+  description: Feature request
+
+- name: 🚧 chore
+  color: 'E3A466'
+  description: Tedious but necessary task
+
+- name: ⛔ conflicts
+  color: 'E67F03'
+  description: Merge conflicts to be resolved by the author of the PR
+
+- name: 📝 discussion
+  color: '78A5FF'
+  description: Invite to discussion of collaborators
+
+- name: ❌ duplicate
+  color: 'FFFFFF'
+  description: Duplicated issue link to the issue in comments
+
+- name: ❌ out-of-scope
+  color: 'FFFFFF'
+  description:
+
+- name: ❌ invalid
+  color: 'FFFFFF'
+  description: This issue can not be confirmed or was reported in the wrong tracker.
+
+- name: 💡 enhancement
+  color: '71FFA4'
+  description: Improvement of existing code
+
+- name: 💣 big-enhancement
+  color: '00FF62'
+  description: Epic improvement deserving a full release
+
+- name: 🎉 ext-dependency
+  color: 'E64320'
+  description: Third-party dependency problem can't fix by our own
+
+- name: 🎉 dependencies
+  color: 'E64320'
+  description: Pull requests that update a dependency file
+
+- name: 🆘 help-needed
+  color: '78A5FF'
+  description: Issue author is asking for help
+
+- name: ⌛ in-progress
+  color: '71FFA4'
+  description: Issue is currently worked on
+
+- name: ⌛ in-review
+  color: '71FFA4'
+  description: Issue is currently reviewed
+
+- name: ⚠️ low-priority
+  color: '71FFA4'
+  description: Non-urgent changes and future ideas
+
+- name: ⚠️ medium-priority
+  color: 'E3A466'
+  description: Can be worked on later
+
+- name: ⚠️ high-priority
+  color: 'E64320'
+  description: Need to be worked on ASAP
+
+- name: ⚠️ critical-priority
+  color: '000000'
+  description: Stop all work in progress and work on this (to be used when REALLY necessary!)
+
+- name: ❓ question
+  color: 'E3A466'
+  description: This is a general question or in the context of the resolution of the incident
+
+- name: ⌛ research-needed
+  color: '78A5FF'
+  description: Research required be clear and concise
+
+- name: 🔰 beginner
+  color: '71FFA4'
+  description: Issue that can be resolved by beginners
+
+- name: 🔰 intermediate
+  color: 'E3A466'
+  description: Issue requiring at least intermediate developers
+
+- name: 🔰 advanced
+  color: 'E67F03'
+  description: Issue requiring at least advanced developers
+
+- name: 🔰 expert
+  color: 'E64320'
+  description: Issue requiring expert developers
+
+- name: ⭐ feature
+  color: '78A5FF'
+  description: Functionnality request changes, improvements, additions, etc
+
+- name: ⛔ blocked
+  color: 'EEEEEE'
+  description: Is blocked by another issue (specify which in comments)
+
+- name: ⛔ blocker
+  color: '000000'
+  description: Blocks the progress of an issue requires special attention(specify which in comments)
+
+- name: 🖥️ windows
+  color: '2E95D1'
+  description: Under Windows OS
+
+- name: 🍎 macos
+  color: '2E95D1'
+  description: Under MacOS
+
+- name: 🐧 linux
+  color: '2E95D1'
+  description: Under Linux OS
+
+- name: 🚀 admin-task
+  color: 'E64320'
+  description: Task requiring an administrator
+
+- name: 🚀 technical-task
+  color: 'E67F03'
+  description: Task requiring technical work
+
+- name: 🚀 design-task
+  color: 'E67F03'
+  description: Task requiring design work
+
+- name: 💚 github_actions
+  color: '4078c0'
+  description: Changes for GitHub Actions
+
+- name: 💚 github
+  color: '4078c0'
+  description: Changes for GitHub files
+
+- name: 💪 good first issue
+  color: '7057ff'
+  description: Good for newcomers
+
+- name: 📚 docs
+  color: '0075ca'
+  description: Improvements or additions to documentation
+
+- name: ❌ wontfix
+  color: 'EEEEEE'
+  description: This will not be worked on
+
+- name: 🤖 bot
+  color: 'ededed'
+  description: GitHub Robots

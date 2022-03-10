@@ -1,0 +1,14 @@
+name: Pipeline - Create labels
+on:
+  workflow_dispatch:
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: EndBug/label-sync@v2.0.0
+        with:
+          config-file: '.github/config/create-labels.yml'
+          source-repo: wr-projects/github-template
+          delete-other-labels: true
+          token: ${{ secrets.GITHUB_TOKEN }}
