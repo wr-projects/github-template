@@ -48,3 +48,16 @@ body:
       placeholder: ex. https://github.com/USERNAME/REPO-NAME
     validations:
       required: false
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: false
