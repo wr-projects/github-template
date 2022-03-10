@@ -103,3 +103,5 @@ body:
         - Windows
         - Linux
         - Mac
+    validations:
+      required: false
