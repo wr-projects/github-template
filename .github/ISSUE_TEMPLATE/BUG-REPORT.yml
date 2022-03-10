@@ -19,3 +19,16 @@ body:
       multiple: false
       options:
         - Latest
+    validations:
+      required: true
+ - type: dropdown
+    id: branches
+    attributes:
+      label: "Branch"
+      description: What is the impacted branch ?
+      multiple: true
+      options:
+        - main/
+        - development/
+    validations:
+      required: true
