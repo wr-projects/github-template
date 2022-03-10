@@ -93,11 +93,13 @@ body:
         - Opera
     validations:
       required: false
-  - type: checkboxes
-    id: docker
+  - type: dropdown
+    id: os
     attributes:
-      label: "Docker"
-      description: Will Docker be impacted ?
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
       options:
-        - label: yes
-        - label: no
+        - Windows
+        - Linux
+        - Mac
