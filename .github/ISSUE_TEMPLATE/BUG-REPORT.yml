@@ -6,7 +6,7 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Contact Details
+      label: "Contact Details"
       description: Please enter your email or your Discord username & id
       placeholder: ex. user@example.com or username#id
     validations:
@@ -14,7 +14,7 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: Version
+      label: "Version"
       description: What is the impacted version ?
       multiple: false
       options:
@@ -24,7 +24,7 @@ body:
   - type: dropdown
     id: branches
     attributes:
-      label: Branch
+      label: "Branch"
       description: What is the impacted branch ?
       multiple: true
       options:
@@ -35,7 +35,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Description
+      label: "Description"
       description: Please enter an explicit description of your issue
       placeholder: Short and explicit description of your incident...
     validations:
@@ -43,7 +43,7 @@ body:
   - type: input
     id: reprod-url
     attributes:
-      label: Reproduction URL
+      label: "Reproduction URL"
       description: Please enter your GitHub URL to provide a reproduction of the issue
       placeholder: ex. https://github.com/USERNAME/REPO-NAME
     validations:
@@ -51,7 +51,7 @@ body:
   - type: textarea
     id: reprod
     attributes:
-      label: Reproduction steps
+      label: "Reproduction steps"
       description: Please enter an explicit description of your issue
       value: |
         1. Go to '...'
@@ -64,7 +64,7 @@ body:
   - type: textarea
     id: screenshot
     attributes:
-      label: Screenshots
+      label: "Screenshots"
       description: If applicable, add screenshots to help explain your problem.
       value: |
         ![DESCRIPTION](LINK.png)
@@ -74,7 +74,7 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Logs
+      label: "Logs"
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: bash
     validations:
@@ -82,7 +82,7 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: Browsers
+      label: "Browsers"
       description: What browsers are you seeing the problem on ?
       multiple: true
       options:
@@ -96,7 +96,7 @@ body:
   - type: checkboxes
     id: docker
     attributes:
-      label: Docker
+      label: "Docker"
       description: Will Docker be impacted ?
       options:
         - label: yes
@@ -104,7 +104,7 @@ body:
   - type: dropdown
     id: os
     attributes:
-      label: OS
+      label: "OS"
       description: What is the impacted environment ?
       multiple: true
       options:
