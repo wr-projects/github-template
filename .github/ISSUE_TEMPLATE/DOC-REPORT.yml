@@ -1,6 +1,6 @@
 name: "🐛 Docs bug report"
 description: Create a new ticket to report an incident impacting the documentation.
-title: "🐛 [BUG] - <title>"
+title: "🐛 [BUG] [DOCS] - <title>"
 labels: ["🐛 in-analysis", "🆘 help-needed", "🆘 new-issue", "📚 docs"]
 body:
   - type: input
@@ -16,6 +16,8 @@ body:
     attributes:
       label: "Link to the documentation page or resource"
       placeholder: "https://github.com/"
+    validations:
+      required: true
   - type: dropdown
     id: version
     attributes:
