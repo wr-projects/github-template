@@ -1,6 +1,6 @@
-name: "🐛 [BUG] -"
+name: "🐛 Bug"
 description: Create a new ticket for a bug
-title: "🐛 [BUG] - "
+title: "🐛 [BUG] - <title>"
 labels: ["🐛 in-analysis", "🆘 help-needed", "🆘 new-issue"]
 body:
   - type: input
