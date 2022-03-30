@@ -1,3 +1,8 @@
+---
+title: 🔐 Security Policy
+description: See our security policy to apply.
+---
+
 # Security Policy
 
 ## Supported Versions
