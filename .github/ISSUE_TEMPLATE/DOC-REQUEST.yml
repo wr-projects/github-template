@@ -1,5 +1,5 @@
 name: "💡 Documentation Request"
-description: Create a new ticket for a new feature request
+description: Create a ticket for a feature request/additional documentation.
 title: "💡 [REQUEST] [DOCS] - <title>"
 labels: ["⌛ awaiting-review", "💡 rfc", "📝 discussion", "📚 docs"]
 body:
