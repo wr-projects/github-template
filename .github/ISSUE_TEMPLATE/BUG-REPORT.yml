@@ -1,5 +1,9 @@
 name: "🐛 [BUG] -"
+<<<<<<< Updated upstream
 description: aaaaa
+=======
+description: Create a new ticket for a bug
+>>>>>>> Stashed changes
 title: "🐛 [BUG] - "
 labels: ["🐛 in-analysis", "🆘 help-needed", "🆘 new-issue"]
 body:
