@@ -1,4 +1,4 @@
-name: "[RFCS] - "
+name: "💡 [RFCS] - "
 description: Create a new ticket for a new feature request
 title: "[RFCS] - "
 labels: ["⌛ awaiting-review", "💡 rfc", "📝 discussion"]
