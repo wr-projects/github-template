@@ -11,7 +11,7 @@ body:
       placeholder: "month/day/year"
     validations:
       required: false
-  - type: input
+  - type: textarea
     id: implementation_pr
     attributes:
       label: "Implementation PR"
@@ -19,7 +19,7 @@ body:
       placeholder: "#Pull Request ID"
     validations:
       required: false
-  - type: input
+  - type: textarea
     id: reference_issues
     attributes:
       label: "Reference Issues"
