@@ -1,12 +1,8 @@
-name: "🐛 Bug"
+name: "🐛 Bug Report"
 description: Create a new ticket for a bug
 title: "🐛 [BUG] - <title>"
 labels: ["🐛 in-analysis", "🆘 help-needed", "🆘 new-issue"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: input
     id: contact
     attributes:
