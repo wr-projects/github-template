@@ -38,9 +38,9 @@ jobs:
       - uses: fabasoad/nsfw-detection-action@main
         name: Check for new dependencies
         with:
-          provider:
+          provider: deepai
           threshold: 0.9
           type: modified,added,renamed
           extensions: jpg,jpeg,png,gif,webp
-          api_key: ${{ secrets. }}
+          api_key: ${{ secrets.DEEPAI_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}

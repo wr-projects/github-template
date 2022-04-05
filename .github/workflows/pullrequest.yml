@@ -42,7 +42,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           use-emoji-map: true
           use-fuzzy: false
-          emoji-map: 'https://raw.githubusercontent.com/WebReadyProjects/github-template/main/.github/config/emoji_mapping.json'
+          emoji-map: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/emoji_mapping.json'
 
   # More info: https://github.com/hiwelo/new-dependencies-action
   check_new_dependencies:
@@ -93,7 +93,7 @@ jobs:
       - uses: AlbertHernandez/working-label-action@v1.0.3
         name: Label WIP
         with:
-          work_in_progress_label: '🚧 chore'
-          ready_to_review_label: '⌛ awaiting-review'
+          work_in_progress_label: 'type: 🚧 chore'
+          ready_to_review_label: 'status: ⌛ awaiting-review'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
