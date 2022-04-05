@@ -1,7 +1,12 @@
 name: "💡 Documentation Request"
 description: Create a ticket for a feature request/additional documentation.
 title: "💡 [REQUEST] [DOCS] - <title>"
-labels: ["⌛ awaiting-review", "💡 rfc", "📝 discussion", "📚 docs"]
+labels: [
+  "status: 💡 rfc",
+  "status: 📝 discussion",
+  "source: 📚 docs",
+  "status: ❓ question"
+]
 body:
   - type: input
     id: start_date

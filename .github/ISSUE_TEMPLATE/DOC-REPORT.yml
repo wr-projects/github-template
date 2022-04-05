@@ -1,7 +1,13 @@
 name: "🐛 Docs bug report"
 description: Create a new ticket to report an incident impacting the documentation.
 title: "🐛 [BUG] [DOCS] - <title>"
-labels: ["🐛 in-analysis", "🆘 help-needed", "🆘 new-issue", "📚 docs"]
+labels: [
+  "status: 🆘 new-issue",
+  "status: 🆘 help-needed",
+  "status: ⌛ in-analysis",
+  "source: 📚 docs",
+  "group: 💬 support"
+]
 body:
   - type: input
     id: contact
@@ -112,3 +118,11 @@ body:
         - Mac
     validations:
       required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
