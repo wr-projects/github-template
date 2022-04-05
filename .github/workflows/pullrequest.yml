@@ -44,6 +44,19 @@ jobs:
           use-fuzzy: false
           emoji-map: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/emoji_mapping.json'
 
+  # More info: https://github.com/Decathlon/pull-request-labeler-action
+  labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: docker://decathlon/pull-request-labeler-action:2.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   # More info: https://github.com/hiwelo/new-dependencies-action
   check_new_dependencies:
     runs-on: ubuntu-latest

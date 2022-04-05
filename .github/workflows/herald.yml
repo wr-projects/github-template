@@ -1,0 +1,20 @@
+---
+name: Herald
+
+on:
+  pull_request:
+    types: [edited, opened, synchronize, reopened]
+
+jobs:
+  herald:
+    name: Apply Herald Rules
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gagoar/use-herald-action@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          rulesLocation: '.github/config/rules/*.json'
+          DEBUG: "*"
+          dryRun: true
+      - name: Store applied rules to file
+        run: echo '\${{ fromJSON(steps.foobar.outputs.appliedRules) }}' > rulesApplied.json

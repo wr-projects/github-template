@@ -15,5 +15,5 @@ jobs:
       - uses: EndBug/label-sync@v2
         with:
           delete-other-labels: true
-          config-file: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/create-labels.yml'
+          config-file: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/workflows/create-labels.yml'
           token: ${{ secrets.GITHUB_TOKEN }}
