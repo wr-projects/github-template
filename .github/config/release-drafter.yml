@@ -3,24 +3,24 @@ tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '⭐ Features'
     collapse-after: 10
-    label: '⭐ feature'
+    label: 'type: ⭐ feature'
   - title: '🚑 Hotfix'
     collapse-after: 10
     label: 'hotfix'
   - title: '🐛 Bug Fixes'
     collapse-after: 10
-    label: '🐛 bug'
+    label: 'type: 🐛 bug'
   - title: '📚 Documentation'
     collapse-after: 3
-    label: '📚 docs'
+    label: 'source: 📚 docs'
   - title: '⬆️ Dependency Updates'
     collapse-after: 3
     labels:
-      - '🎉 ext-dependency'
-      - '🎉 dependencies'
+      - 'source: 🎉 ext-dependency'
+      - 'source: 🎉 dependencies'
   - title: '🧰 Maintenance'
     collapse-after: 3
-    label: 'wip'
+    label: 'type: 🚧 chore'
 exclude-labels:
   - 'skip-changelog'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
