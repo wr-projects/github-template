@@ -1,3 +1,4 @@
+---
 name: Pipeline - Create labels
 on:
   workflow_dispatch:
@@ -8,6 +9,6 @@ jobs:
     steps:
       - uses: EndBug/label-sync@v2.0.0
         with:
-          config-file: https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/create-labels.yml
           delete-other-labels: true
+          config-file: https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/create-labels.yml
           token: ${{ secrets.GITHUB_TOKEN }}
