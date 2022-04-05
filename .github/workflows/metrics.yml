@@ -1,3 +1,4 @@
+---
 name: Pipeline - Metrics
 on:
   schedule:

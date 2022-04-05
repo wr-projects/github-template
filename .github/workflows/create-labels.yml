@@ -7,8 +7,13 @@ jobs:
   labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: EndBug/label-sync@v2.0.0
+      - uses: actions/checkout@v2
+        name: Checkout & Authentication
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: EndBug/label-sync@v2
         with:
           delete-other-labels: true
-          config-file: https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/create-labels.yml
+          config-file: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/create-labels.yml'
           token: ${{ secrets.GITHUB_TOKEN }}

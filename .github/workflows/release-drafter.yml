@@ -1,3 +1,4 @@
+---
 name: Pipeline - Release Drafter
 on:
   push:

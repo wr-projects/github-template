@@ -1,3 +1,4 @@
+---
 name: Pipeline - Autosquash
 on:
   check_run:
