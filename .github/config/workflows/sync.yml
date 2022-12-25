@@ -2,7 +2,10 @@ wr-projects/github-jstemplate:
   - OSSMETADATA
 
   - source: .github/workflows/
-    exclude: auto-sync.yml
+    dest: .github/workflows
+    exclude: |
+      auto-sync.yml
+      gh-pages.yml
 
   - source: README.md
     replace: false
