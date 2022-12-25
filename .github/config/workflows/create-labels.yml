@@ -1,5 +1,5 @@
 ---
-- name: "status: 🆘 new-issue"
+- name: "status:🆘new-issue"
   color: '78A5FF'
   description: New incident not yet taken care of by a project collaborator
 
@@ -23,7 +23,7 @@
   color: 'FF6D00'
   description: Issue is currently reviewed
 
-- name: "status: ⌛ in-analysis"
+- name: "status:⌛in-analysis"
   color: 'FF6D00'
   description: The issue is being analyzed to determine if it is a real incident
 
