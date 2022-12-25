@@ -1,6 +1,6 @@
 **Rating**: **MODERATE**
 
-**Score**: **4.83**, max score value is 10.0
+**Score**: **4.86**, max score value is 10.0
 
 **Confidence**: High (9.57, max confidence value is 10.0)
 
@@ -79,7 +79,7 @@ It used the following sub-scores:
     
 1.  **[Community commitment](#community-commitment)**: **0.0** (weight is 0.5)
     
-1.  **[Project activity](#project-activity)**: **1.29** (weight is 0.5)
+1.  **[Project activity](#project-activity)**: **1.62** (weight is 0.5)
     
 1.  **[Project popularity](#project-popularity)**: **0.01** (weight is 0.5)
     
@@ -300,18 +300,18 @@ This sub-score is based on 3 features:
 
 ### Project activity
 
-Score: **1.29**, confidence is 10.0 (max), weight is 0.5 (medium)
+Score: **1.62**, confidence is 10.0 (max), weight is 0.5 (medium)
 
 The score evaluates how active a project is. It's based on number of commits and contributors in the last 3 months.
 
-8 commits in the last 3 months results to 1.23 points
-2 contributors increase the score value from 1.23 to 1.29
+10 commits in the last 3 months results to 1.54 points
+2 contributors increase the score value from 1.54 to 1.62
 
 This sub-score is based on 2 features:
 
 
 
-1.  **Number of commits in the last three months:** 8
+1.  **Number of commits in the last three months:** 10
 1.  **Number of contributors in the last three months:** 2
 
 
@@ -328,7 +328,7 @@ This sub-score is based on 3 features:
 
 
 1.  **Number of projects on GitHub that use an open source project:** unknown
-1.  **Number of stars for a GitHub repository:** 0
+1.  **Number of stars for a GitHub repository:** 1
 1.  **Number of watchers for a GitHub repository:** 2
 
 
