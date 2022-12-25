@@ -103,7 +103,7 @@
   color: 'D84315'
   description: Stop all work in progress and work on this (to be used when REALLY necessary!)
 
-- name: "type: 🐛 bug"
+- name: "type:🐛bug"
   color: 'DDCECD'
   description: Confirmed bug
 
@@ -223,7 +223,7 @@
   color: '7B506F'
   description: Backend developers group
 
-- name: "group: 👨‍💻 devops"
+- name: "group:👨‍💻devops"
   color: '7B506F'
   description: DevOps group
 

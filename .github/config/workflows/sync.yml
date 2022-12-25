@@ -7,8 +7,6 @@ group:
         dest: .github/.husky/
       - source: .github/ISSUE_TEMPLATE/
         dest: .github/ISSUE_TEMPLATE/
-      - source: .github/assets/
-        dest: .github/assets/
       - source: .github/config/linters/
         dest: .github/config/linters/
       - source: .github/config/workflows/create-labels.yml
