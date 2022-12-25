@@ -5,7 +5,6 @@ wr-projects/github-jstemplate:
     dest: .github/
 
   - source: .github/workflows/
-    dest: .github/workflows/
     exclude: auto-sync.yml
 
   - source: README.md
