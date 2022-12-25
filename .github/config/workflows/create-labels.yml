@@ -127,6 +127,10 @@
   color: 'DDCECD'
   description: Functionnality request changes, improvements, additions, etc
 
+- name: "type: 🔐 security"
+  color: 'DDCECD'
+  description: Generally linked to the critical-priority label, it is therefore necessary to pay attention to the usage.
+
 - name: "type: ⛔ conflicts"
   color: 'DDCECD'
   description: Merge conflicts to be resolved by the author of the PR
@@ -174,6 +178,10 @@
 - name: "source: 📚 wiki"
   color: 'DD99BB'
   description: Modifications to the Wiki files
+
+- name: "knowledge: 👌 good-first-issue"
+  color: 'AD5D4E'
+  description: The report contains instructions required to fix it. It is an good place for someone new to learn about the project by fixing a real issue.
 
 - name: "os: 🖥️ windows"
   color: 'E0CA3C'

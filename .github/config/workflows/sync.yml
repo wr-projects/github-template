@@ -1,0 +1,11 @@
+wr-projects/github-template:
+  - OSSMETADATA
+  - source: .github/
+    dest: .github/
+  - source: README.md
+    replace: false
+  - source: LICENSES/
+    replace: false
+  - source: .all-contributorsrc
+    replace: false
+
