@@ -1,8 +1,8 @@
 wr-projects/github-jstemplate:
   - OSSMETADATA
-  - source: .github/workflows/
-    dest: .github/workfows
-    exclude: auto-sync.yml
+  - source: .github/
+    dest: .github/
+    exclude: workflows/auto-sync.yml
   - source: README.md
     replace: false
   - source: LICENSES/
