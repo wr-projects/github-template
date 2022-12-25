@@ -3,8 +3,8 @@ group:
       wr-projects/github-jstemplate
 
     files:
-      - source: .github/husky/
-        dest: .github/husky/
+      - source: .github/.husky/
+        dest: .github/.husky/
       - source: .github/ISSUE_TEMPLATE/
         dest: .github/ISSUE_TEMPLATE/
       - source: .github/assets/
@@ -43,4 +43,20 @@ group:
         dest: .github/PULL_REQUEST_TEMPLATE.md
       - source: .github/dependabot.yml
         dest: .github/dependabot.yml
+      - source: LICENSES/
+        replace: false
+      - source: .all-contributorsrc
+        replace: false
+      - source: .editorconfig
+        dest: .editorconfig
+      - source: .gitconfig
+        dest: .gitconfig
+      - source: .gitignore
+        replace: false
+      - source: LICENSE
+        replace: false
+      - source: OSSMETADATA
+        dest: OSSMETADATA
+      - source: README.md
+        replace: false
 
