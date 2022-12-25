@@ -1,22 +1,33 @@
 wr-projects/github-jstemplate:
   - OSSMETADATA
+
   - .github/PULL_REQUEST_TEMPLATE.md
+
   - source: .github/.husky/
     dest: .github/.husky/
+
   - source: .github/ISSUE_TEMPLATE/
     dest: .github/ISSUE_TEMPLATE/
+
   - source: .github/assets/
     dest: .github/assets/
+
   - source: .github/config/
     dest: .github/config/
+
   - source: .github/wiki/
+
   - source: .github/workflows/
     dest: .github/workflows/
-    exclude: auto-sync.yml
+    exclude: |
+      auto-sync.yml
+
   - source: README.md
     replace: false
+
   - source: LICENSES/
     replace: false
+
   - source: .all-contributorsrc
     replace: false
 
