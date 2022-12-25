@@ -45,11 +45,11 @@ jobs:
           fetch-depth: 0
 
       # More info: https://github.com/leonsteinhaeuser/project-beta-automations/
-      - name: Move issue to {{ env.new }}
+      - name: Move issue to 🆕 New
         uses: leonsteinhaeuser/project-beta-automations@7f947733020ee03daa363d16ea1223717b132f11
         with:
           gh_token: ${{ steps.get_token.outputs.token }}
-          organization: ${{ env.organization }}
-          project_id: ${{ env.project_id }}
+          organization: wr-projects
+          project_id: 14
           resource_node_id: ${{ github.event.issue.node_id }}
-          status_value: ${{ env.new }}
+          status_value: 🆕 New
