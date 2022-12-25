@@ -18,7 +18,7 @@ jobs:
   issue_labeled_team:
     name: issue_opened_or_reopened
     runs-on: ubuntu-latest
-    if: contains(github.event.issues.labels.*.name, '<group:👨‍💻devops status:⌛in-analysis type:🐛bug>')
+    if: contains(github.event.issues.labels.*.name, 'group:👨‍💻devops')
 
     steps:
       # More info: https://github.com/step-security/harden-runner.
