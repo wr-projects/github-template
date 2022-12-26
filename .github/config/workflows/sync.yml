@@ -1,6 +1,7 @@
 group:
   - repos: |
       wr-projects/github-jstemplate
+      wr-projects/monorepojs-scaffolding
 
     files:
       - source: .github/.husky/
@@ -57,4 +58,3 @@ group:
         dest: OSSMETADATA
       - source: README.md
         replace: false
-
