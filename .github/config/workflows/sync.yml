@@ -2,6 +2,7 @@ group:
   - repos: |
       wr-projects/github-jstemplate
       wr-projects/monorepojs-scaffolding
+      wr-projects/ospo
 
     files:
       - source: .github/.husky/
