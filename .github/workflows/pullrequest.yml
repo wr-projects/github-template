@@ -136,7 +136,6 @@ jobs:
           use-emoji-map: true
           emoji-map: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/workflows/emoji_mapping.json'
           require-space: true
-          token: ${{ steps.get_token.outputs.token }}
 
   # More info: https://github.com/hiwelo/new-dependencies-action
   check_new_dependencies:
@@ -169,5 +168,3 @@ jobs:
 
       - name: Check for new dependencies
         uses: hiwelo/new-dependencies-action@e4175e14484328f9ab56df91e420e90ad5031c08
-        with:
-          token: ${{ steps.get_token.outputs.token }}
