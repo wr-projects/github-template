@@ -7,7 +7,7 @@
 [![](https://img.shields.io/osslifecycle/wr-projects/github-template)]()
 [![Fosstars security rating](https://raw.githubusercontent.com/wr-projects/github-template/.github/assets/fosstars-report/fosstars-security-rating.svg)](https://github.com/wr-projects/github-template/blob/fosstars-report/fosstars_security_rating.md)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # github-template
@@ -22,6 +22,7 @@
   <tbody>
     <tr>
       <td align="center"><a href="https://www.facebook.com/profile.php?id=100009457709527"><img src="https://avatars.githubusercontent.com/u/16638358?v=4" width="100px;" alt=""/><br /><sub><b>Gregoire Favreau</b></sub></a></td>
+      <td align="center"><a href="https://github.com/versnic"><img src="https://avatars.githubusercontent.com/u/37933264?v=4" width="100px;" alt=""/><br /><sub><b>Nicolas Verlaeken</b></sub></a></td>
     </tr>
   </tbody>
   <tfoot>
