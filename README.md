@@ -6,6 +6,20 @@
 [![](https://img.shields.io/lgtm/alerts/g/wr-projects/github-template.svg?logo=lgtm&logoWidth=18)]()
 [![](https://img.shields.io/osslifecycle/wr-projects/github-template)]()
 [![Fosstars security rating](https://raw.githubusercontent.com/wr-projects/github-template/.github/assets/fosstars-report/fosstars-security-rating.svg)](https://github.com/wr-projects/github-template/blob/fosstars-report/fosstars_security_rating.md)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # github-template
 🚀 GitHub template to provide a pre-designed architecture for all types of open-source projects.
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
