@@ -2,6 +2,7 @@ group:
   - repos: |
       wr-projects/github-jstemplate
       wr-projects/monorepojs-scaffolding
+      wr-projects/oss-scaffolding
       wr-projects/ospo
 
     files:
@@ -15,8 +16,6 @@ group:
         dest: .github/config/workflows/create-labels.yml
       - source: .github/config/workflows/emoji_mapping.json
         dest: .github/config/workflows/emoji_mapping.json
-      - source: .github/wiki/
-        dest: .github/wiki/
       - source: .github/workflows/auto-approve.yml
         dest: .github/workflows/auto-approve.yml
       - source: .github/workflows/autoupdate.yml
