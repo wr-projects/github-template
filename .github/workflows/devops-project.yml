@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2022 WebReady Projects <https://github.com/wr-projects/>
+#
+# SPDX-License-Identifier: MIT
 ---
 name: Pipeline -
 on:
@@ -15,11 +18,10 @@ env:
 
 jobs:
 
-  issue_labeled_team:
-    name: issue_opened_or_reopened
+  new_issue_labeled_team:
+    name: new_issue_labeled_team
     runs-on: ubuntu-latest
     if: ${{ github.event.label.name == 'group:👨‍💻devops' }} && contains(fromJson('["status:⌛in-analysis", "status:🆘new-issue"]'), github.event.label.name)
-    #if: ${{ github.event.label.name == 'group:👨‍💻devops' || }}
 
     steps:
       # More info: https://github.com/step-security/harden-runner.

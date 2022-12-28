@@ -1,3 +1,8 @@
+<!-- 
+SPDX-FileCopyrightText: 2022 WebReady Projects <https://github.com/wr-projects/>
+
+SPDX-License-Identifier: MIT
+-->
 [![Discord](https://img.shields.io/badge/Discord-5865F2)]()
 [![Maintainer](https://img.shields.io/badge/Maintainer-WRProjects-7F187F)]()
 ![./LICENSE](https://img.shields.io/github/license/wr-projects/github-template)
