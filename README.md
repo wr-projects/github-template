@@ -6,6 +6,7 @@ SPDX-License-Identifier: MIT
 [![Discord](https://img.shields.io/badge/Discord-5865F2)]()
 [![Maintainer](https://img.shields.io/badge/Maintainer-WRProjects-7F187F)]()
 ![./LICENSE](https://img.shields.io/github/license/wr-projects/github-template)
+[![Pipeline - Auto Sync](https://github.com/wr-projects/github-template/actions/workflows/auto-sync.yml/badge.svg?branch=main)](https://github.com/wr-projects/github-template/actions/workflows/auto-sync.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5323bd08dd3f4dbd91a9d889847ba2b3)](https://www.codacy.com/gh/wr-projects/github-template/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wr-projects/github-template&amp;utm_campaign=Badge_Grade)
 ![https://lift.sonatype.com/](https://lift.sonatype.com/api/badge/github.com/wr-projects/github-template)
 [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6742/badge)](https://bestpractices.coreinfrastructure.org/projects/6742)
