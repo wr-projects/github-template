@@ -33,7 +33,7 @@ jobs:
 
       # More info: https://github.com/rovast/sync-upstream-repo/.
       - name: GitHub Sync to Upstream Repository
-        uses: BetaHuhn/repo-file-sync-action@69868d68f6969b7a599ca783823eb29e3b3679e8
+        uses: BetaHuhn/repo-file-sync-action@3023dac7ce66c18b119e2012348437eadeaea116
         with:
           GH_INSTALLATION_TOKEN: ${{ steps.get_token.outputs.token }}
           CONFIG_PATH: '.github/config/workflows/sync.yml'
