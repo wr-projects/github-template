@@ -1,0 +1,20 @@
+---
+name: 'Pipeline - Dependabot Auto Merge'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Dependabot Auto Merge
+        uses: fastify/github-action-merge-dependabot@be73043be1228aa39e89a1c4e4187db6a50b3251
