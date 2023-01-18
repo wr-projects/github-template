@@ -16,6 +16,7 @@ jobs:
   Auto:
     name: Auto-update
     runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
 
     steps:
       # More info: https://github.com/step-security/harden-runner.

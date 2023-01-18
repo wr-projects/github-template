@@ -13,6 +13,7 @@ jobs:
   build:
     name: Auto Sync
     runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
     steps:
       # More info: https://github.com/peter-murray/workflow-application-token-action.
       - name: Get token

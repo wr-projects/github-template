@@ -15,7 +15,7 @@ jobs:
 
   auto-approve:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
 
     steps:
       # More info: https://github.com/step-security/harden-runner.

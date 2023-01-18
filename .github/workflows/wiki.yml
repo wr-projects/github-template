@@ -26,6 +26,7 @@ permissions:
 
 jobs:
   wiki:
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
     runs-on: ubuntu-latest
 
     steps:

@@ -15,6 +15,7 @@ jobs:
   gitguardian:
     name: GitGuardian Scanner
     runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
 
     steps:
       # More info: https://github.com/step-security/harden-runner.
@@ -51,6 +52,7 @@ jobs:
     needs: [gitguardian]
     name: "SBOM"
     runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
 
     steps:
       # More info: https://github.com/step-security/harden-runner.
