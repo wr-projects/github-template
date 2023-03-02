@@ -19,8 +19,6 @@ group:
         dest: .github/config/workflows/create-labels.yml
       - source: .github/config/workflows/emoji_mapping.json
         dest: .github/config/workflows/emoji_mapping.json
-      - source: .github/workflows/auto-approve.yml
-        dest: .github/workflows/auto-approve.yml
       - source: .github/workflows/autoupdate.yml
         dest: .github/workflows/autoupdate.yml
       - source: .github/workflows/create-labels.yml
