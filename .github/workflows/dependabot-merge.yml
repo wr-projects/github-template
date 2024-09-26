@@ -17,4 +17,4 @@ jobs:
 
     steps:
       - name: Dependabot Auto Merge
-        uses: fastify/github-action-merge-dependabot@9e7bfb249c69139d7bdcd8d984f9665edd49020b
+        uses: fastify/github-action-merge-dependabot@3892334d1c649bb8119af3d22a3f3766bd5e593f
