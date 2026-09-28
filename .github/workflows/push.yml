@@ -67,7 +67,7 @@ jobs:
         uses: anchore/sbom-action/download-syft@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26
 
       - name: Generate SBOM file
-        uses: anchore/sbom-action@aa80c8c5bd439a416a62804f2151ab38c671a638
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26
         with:
           artifact-name: sbom.spdx
           format: spdx
